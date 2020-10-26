@@ -1,0 +1,293 @@
+
+/*
+    General
+*/
+@import url(//fonts.googleapis.com/css?family=Literata);
+
+*{
+    font-family: 'Literata' ;    
+   
+}
+body{background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);}
+
+/*
+    Header Menu
+*/
+.kcf-Logo{
+    height: inherit;
+    margin-left: 22%;
+    position: absolute;
+    
+}
+
+.customNav{      
+    height: 100px;
+    z-index: 9999;
+    position: fixed;        
+    width: 100%;
+}
+
+.customNav li{
+    margin-top: 0;
+    margin-top: 1.5%;
+}
+
+.customNav a{
+    color: white;
+    font-weight: bold;
+}
+
+.customNav a:hover{
+    color: #ff7315;    
+    font-weight: bolder;
+    text-shadow: 0 0 white;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/*
+    Home Carousel 
+*/
+.carousel{
+    z-index: 2;
+}
+
+.carousel-img{
+    height:100vh;
+    outline: 100vh solid rgb(0, 0, 0,0.5);
+    outline-offset: -100vh;
+    z-index: 5;
+}
+
+.carousel-caption {
+    /* background-color:rgb(0, 0, 0,0.5);       */
+    right: 70%;
+    bottom: 40%;
+    text-align:right;
+}
+
+h3,p.carousel-caption{    
+    font-size: 50px;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.carousel-caption h3:first-of-type {    /* For increasing performance 
+    ID/Class should've been used. 
+    For a small demo 
+    it's okaish for now */
+    animation: showup 7s infinite;
+}
+
+/* #fromRight:first-of-type {
+    margin-right:-350px;
+    animation: slideinFromLeft 7s infinite;
+} */
+
+.carousel-caption h3:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+
+  .carousel-caption h3:last-of-type span{
+    margin-left:-350px;
+    animation: slideinFromRight 7s infinite;
+  }
+
+  @keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slideinFromRight {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes slideinFromLeft {
+    0% { margin-right:0px; }
+    20% { margin-right:0px; }
+    35% { margin-right:-800px; }
+    100% { margin-right:-800px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:500px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:500px;}
+}
+
+/*
+    How to help
+*/
+
+.howToHelp{      
+    max-width: 100%;    
+    padding: 80px;
+    height: 400px;
+    background-color: #ff7315;
+    
+}
+
+.howToHelp-img{
+    max-width: 100%;
+    height: 800px;
+    filter: opacity(0.6);    
+    position: absolute;
+    margin-top: -15%; 
+    z-index: 0;
+}
+
+.howtoHelpUnderline{
+    border-bottom: 3px solid white ;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: -15px;
+}
+
+.howToHelp h1{
+    color: white;    
+    margin:0 auto;
+    text-align: center;
+    padding-bottom: 35px;
+    z-index: 1;
+    margin-top: 0px;
+    
+    
+}
+
+.howToHelp p{
+    color: white;   
+    overflow-wrap: break-word;
+    margin-left: 30%;
+    margin-right: 30%;     
+    padding-top: 35px;
+    font-size: 18px;
+}
+.slider-hth-pos{
+    background-color: #555555;
+    z-index: 2;
+    position: relative;
+}
+
+/*
+    Cards Style
+*/
+
+.circle {
+	height: 250px;
+    width: 250px;
+    border: solid 1px #555555;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 1;
+    margin-bottom: 2rem;
+    margin-top: 2rem
+}
+.circle:hover {
+    background-color: #ff7315;
+    stroke-width: 71;
+    box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.308) !important;
+    border: 0;
+    border-style: none;
+      
+}
+
+.circle>.card-text-pos:hover{
+    filter: invert(32%) sepia(30%) saturate(0%) hue-rotate(346deg) brightness(1000%) contrast(97%); 
+    color : white;
+    
+
+}
+
+.card-img-top{
+    width: 50%;
+    padding-top: 20%;
+    filter: invert(32%) sepia(30%) saturate(0%) hue-rotate(346deg) brightness(80%) contrast(97%);
+    display: block;
+    margin-left: 25%;
+    padding-bottom: 5%;
+    height: 150px;
+}
+
+.card-text-pos{
+    display: block;
+    font-weight: 800;
+    padding: 25px;
+    color:  #555555;
+}
+
+
+.card-pos{
+    margin-left: 50px;
+}
+
+.card{
+    width: 20rem;
+    background-color: transparent;
+    border: none;    
+}
+
+.card-body{
+    padding: 3rem 0 !important;
+}
+.card-mar{
+    margin-left: 3rem;
+}
+
+/*
+    Instagram Carousel
+*/
+
+.instagram-container {
+    display: flex;
+    margin-top: 50px;
+  }
+  
+  .item {
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+  }
+  
+  .instagram-container:focus-within .item,
+  .instagram-container:hover .item {
+    transform: translateX(-25%);
+  }
+  
+  .item:focus ~ .item,
+  .item:hover ~ .item {
+    transform: translateX(25%);
+  }
+  
+  .instagram-container .item:focus,
+  .instagram-container .item:hover {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+  
+  .instagram-body {
+    overflow: hidden;
+  }
+  
+  .item img {
+    display: block;
+    max-width: 100%;
+  }
+
+
+
+
+
+
+
+
+
